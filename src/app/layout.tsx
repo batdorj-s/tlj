@@ -31,7 +31,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   viewportFit: "cover",
-  themeColor: "#cc3333",
+  themeColor: "#b82a2a",
 };
 
 export default function RootLayout({
@@ -47,7 +47,7 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.webmanifest" />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-foreground font-body">
+      <body className="min-h-full flex flex-col bg-bg text-ink font-body">
         <MotionProvider>{children}</MotionProvider>
         <BottomNav />
       </body>

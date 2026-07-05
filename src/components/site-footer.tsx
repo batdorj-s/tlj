@@ -20,19 +20,19 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-auto bg-foreground text-background">
+    <footer className="mt-auto bg-ink text-bg">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4 md:py-16">
         <div className="md:col-span-1">
           <p className="font-heading text-xl">tu les jour</p>
-          <p className="mt-3 text-sm leading-relaxed text-background/70">
+          <p className="mt-3 text-sm leading-relaxed text-bg/70">
             365 өдөр шинэ. Франц уламжлалын жороор өдөр бүр шинээр бэлтгэсэн
             талх, бялуу, амттан.
           </p>
-          <p className="mt-4 text-xs text-background/50">Артизан ХХК</p>
+          <p className="mt-4 text-xs text-bg/50">Артизан ХХК</p>
         </div>
 
         <nav aria-label="Бүтээгдэхүүн">
-          <h2 className="text-xs font-medium uppercase tracking-[0.12em] text-background/50">
+          <h2 className="text-xs font-medium uppercase tracking-[0.12em] text-bg/50">
             Бүтээгдэхүүн
           </h2>
           <ul className="mt-4 space-y-2.5">
@@ -40,7 +40,7 @@ export function SiteFooter() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-background/80 transition-colors duration-150 ease-out hover-fine:text-background"
+                  className="text-sm text-bg/80 transition-colors duration-150 ease-out hover-fine:text-background"
                 >
                   {link.label}
                 </Link>
@@ -50,7 +50,7 @@ export function SiteFooter() {
         </nav>
 
         <nav aria-label="Компани">
-          <h2 className="text-xs font-medium uppercase tracking-[0.12em] text-background/50">
+          <h2 className="text-xs font-medium uppercase tracking-[0.12em] text-bg/50">
             Компани
           </h2>
           <ul className="mt-4 space-y-2.5">
@@ -58,7 +58,7 @@ export function SiteFooter() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-background/80 transition-colors duration-150 ease-out hover-fine:text-background"
+                  className="text-sm text-bg/80 transition-colors duration-150 ease-out hover-fine:text-background"
                 >
                   {link.label}
                 </Link>
@@ -68,10 +68,10 @@ export function SiteFooter() {
         </nav>
 
         <div>
-          <h2 className="text-xs font-medium uppercase tracking-[0.12em] text-background/50">
+          <h2 className="text-xs font-medium uppercase tracking-[0.12em] text-bg/50">
             Холбоо барих
           </h2>
-          <ul className="mt-4 space-y-3 text-sm text-background/80">
+          <ul className="mt-4 space-y-3 text-sm text-bg/80">
             <li className="flex items-start gap-2.5">
               <MapPin size={18} weight="light" className="mt-0.5 shrink-0" />
               <span>Их Монгол гудамж, Хүннү 2222 хороолол, Улаанбаатар</span>
@@ -98,8 +98,8 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-background/10">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 py-6 text-xs text-background/50 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <div className="border-t border-bg/10">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 py-6 text-xs text-bg/50 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>© {year} Артизан ХХК. Бүх эрх хуулиар хамгаалагдсан.</p>
           <p>Tous Les Jours Mongolia</p>
         </div>

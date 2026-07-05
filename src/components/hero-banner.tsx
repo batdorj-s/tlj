@@ -2,14 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const EASE_OUT = [0.23, 1, 0.32, 1] as const;
+import { easeOut } from "@/lib/animation";
 
 function fadeUp(delay: number) {
   return {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: EASE_OUT, delay },
+    transition: easeOut(0.6, delay),
   };
 }
 

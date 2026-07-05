@@ -1,9 +1,13 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { PromoBanner } from "@/components/promo-banner";
 import { PointCard } from "@/components/point-card";
 import { QuickActions } from "@/components/quick-actions";
 import { ProductCard } from "@/components/product-card";
 import { NewsSection } from "@/components/news-section";
 import type { Product } from "@/lib/types";
+import { easeOut, fadeUp, stagger, sectionProps } from "@/lib/animation";
 
 const PRODUCTS: Product[] = [
   {
@@ -49,15 +53,24 @@ const PRODUCTS: Product[] = [
 
 export default function Home() {
   return (
-    <div className="min-h-full bg-background">
-      <div className="pb-20">
+    <div className="min-h-full bg-bg">
+      <div className="pb-24">
         <PointCard />
         <QuickActions />
         <PromoBanner />
 
-        <section id="products" className="mt-6 px-4">
-          <div className="flex items-center justify-between">
-            <h2 className="font-heading text-lg text-foreground">
+        <motion.section
+          id="products"
+          variants={stagger}
+          {...sectionProps}
+          className="mt-8 px-4"
+        >
+          <motion.div
+            variants={fadeUp}
+            transition={easeOut(0.5)}
+            className="flex items-center justify-between"
+          >
+            <h2 className="font-heading text-lg text-ink">
               Өнөөдрийн онцлох амттан
             </h2>
             <a
@@ -66,16 +79,20 @@ export default function Home() {
             >
               Бүгдийг үзэх
             </a>
-          </div>
+          </motion.div>
 
-          <div className="mt-4 grid grid-cols-2 gap-3">
+          <motion.div
+            variants={fadeUp}
+            transition={easeOut(0.5, 0.1)}
+            className="mt-4 grid grid-cols-2 gap-3"
+          >
             {PRODUCTS.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
 
-        <div className="mt-6">
+        <div className="mt-10">
           <NewsSection />
         </div>
       </div>

@@ -107,6 +107,7 @@ export function SpinToWin() {
             cy={CY}
             r={22}
             fill="var(--color-primary)"
+
             stroke="#ffffff"
             strokeWidth={4}
           />
@@ -125,13 +126,13 @@ export function SpinToWin() {
       <div aria-live="polite" className="mt-4 min-h-6 text-center">
         {result &&
           (result.win ? (
-            <p className="text-sm text-foreground">
+            <p className="text-sm text-ink">
               Баяр хүргэе! Та{" "}
               <span className="font-semibold text-primary">{result.label}</span>{" "}
               хожлоо.
             </p>
           ) : (
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted">
               Энэ удаад азгүй байлаа — дараагийн худалдан авалтдаа дахин
               оролдоорой.
             </p>

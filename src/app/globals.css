@@ -9,36 +9,36 @@
 }
 
 :root {
-  --background: #faf9f7;
-  --foreground: #3d464d;
-  --muted-foreground: #6b7178;
+  --bg: oklch(1 0 0);
+  --ink: oklch(0.22 0.006 40);
+  --muted: oklch(0.52 0.005 40);
 
-  --primary: #cc3333;
-  --primary-hover: #b02a2a;
-  --on-primary: #ffffff;
+  --primary: oklch(0.46 0.17 25);
+  --primary-hover: oklch(0.40 0.17 25);
+  --on-primary: oklch(1 0 0);
 
-  --accent: #cc3333;
-  --accent-hover: #b02a2a;
-  --on-accent: #ffffff;
+  --accent: oklch(0.66 0.12 75);
+  --accent-hover: oklch(0.60 0.12 75);
+  --on-accent: oklch(1 0 0);
 
-  --card: #ffffff;
-  --muted: #f2f2f2;
-  --border: #ebebeb;
+  --surface: oklch(0.975 0.003 30);
+  --muted-bg: oklch(0.96 0.003 30);
+  --border: oklch(0.92 0.003 30);
 
-  --success: #2f8f4e;
-  --success-bg: #eaf5ee;
-  --destructive: #b91c1c;
-  --on-destructive: #ffffff;
+  --success: oklch(0.55 0.14 145);
+  --success-bg: oklch(0.96 0.01 145);
+  --destructive: oklch(0.46 0.17 25);
+  --on-destructive: oklch(1 0 0);
 
-  --ring: #cc3333;
+  --ring: oklch(0.46 0.17 25);
 
-  --shadow-soft-color: 61 70 77;
+  --shadow-ink: 0.22 0.006 40;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
 
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
@@ -48,8 +48,8 @@
   --color-accent-hover: var(--accent-hover);
   --color-on-accent: var(--on-accent);
 
-  --color-card: var(--card);
-  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-muted-bg: var(--muted-bg);
   --color-border: var(--border);
 
   --color-success: var(--success);
@@ -67,8 +67,8 @@
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
 
-  --shadow-soft: 0 2px 10px rgb(var(--shadow-soft-color) / 0.05);
-  --shadow-soft-hover: 0 6px 20px rgb(var(--shadow-soft-color) / 0.08);
+  --shadow-soft: 0 2px 10px oklch(from var(--shadow-ink) l c h / 0.05);
+  --shadow-soft-hover: 0 6px 20px oklch(from var(--shadow-ink) l c h / 0.08);
 }
 
 body {

@@ -22,7 +22,7 @@ const PROMOS = [
 ];
 
 const DOT_ACTIVE = "bg-primary w-5";
-const DOT_INACTIVE = "bg-muted-foreground/25 w-2";
+const DOT_INACTIVE = "bg-muted/25 w-2";
 
 export function PromoBanner() {
   const [current, setCurrent] = useState(0);

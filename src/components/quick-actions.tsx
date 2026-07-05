@@ -8,25 +8,25 @@ const ACTIONS = [
     label: "QR Скан",
     icon: QrCode,
     href: "/scan",
-    color: "text-primary bg-primary/8",
+    color: "text-primary bg-primary/8 hover-fine:bg-primary/15",
   },
   {
     label: "Хүрд эргүүлэх",
     icon: Spinner,
     href: "#loyalty",
-    color: "text-accent bg-accent/8",
+    color: "text-ink bg-muted-bg hover-fine:bg-border",
   },
   {
     label: "Купон",
     icon: Ticket,
     href: "/coupon",
-    color: "text-success bg-success-bg",
+    color: "text-success bg-success-bg hover-fine:bg-success/10",
   },
   {
     label: "Салбарууд",
     icon: MapPin,
     href: "/salbar",
-    color: "text-foreground bg-muted",
+    color: "text-ink bg-muted-bg hover-fine:bg-border",
   },
 ];
 
@@ -40,7 +40,7 @@ export function QuickActions() {
             <Link
               key={action.href}
               href={action.href}
-              className={`flex flex-col items-center gap-1.5 rounded-xl px-3 py-4 text-center transition-transform duration-150 active:scale-[0.95] ${action.color}`}
+              className={`flex flex-col items-center gap-1.5 rounded-xl px-3 py-4 text-center transition-all duration-150 active:scale-[0.95] ${action.color}`}
             >
               <Icon size={26} weight="duotone" />
               <span className="text-[11px] font-medium leading-tight">

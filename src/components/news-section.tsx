@@ -5,10 +5,10 @@ import { NEWS_POSTS } from "@/lib/news";
 
 export function NewsSection() {
   return (
-    <section id="news" className="border-t border-border bg-muted/40">
-      <div className="px-4 py-5">
+    <section id="news" className="border-t border-border">
+      <div className="px-4 py-6">
         <div className="flex items-center justify-between">
-          <h2 className="font-heading text-lg text-foreground">Мэдээ</h2>
+          <h2 className="font-heading text-lg text-ink">Мэдээ</h2>
           <Link
             href="/medee"
             className="text-xs font-medium text-primary transition-colors hover-fine:text-primary-hover"
@@ -27,7 +27,7 @@ export function NewsSection() {
                 <span className="shrink-0 rounded-md bg-primary/8 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.08em] text-primary">
                   {post.tag}
                 </span>
-                <span className="line-clamp-1 flex-1 text-sm text-foreground">
+                <span className="line-clamp-1 flex-1 text-sm text-ink">
                   {post.title}
                 </span>
               </Link>

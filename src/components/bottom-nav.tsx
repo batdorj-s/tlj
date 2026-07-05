@@ -28,7 +28,7 @@ export function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 backdrop-blur-lg supports-[padding-bottom]:pb-[env(safe-area-inset-bottom,0px)]">
+    <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-bg/95 backdrop-blur-lg supports-[padding-bottom]:pb-[env(safe-area-inset-bottom,0px)]">
       <ul className="mx-auto flex h-16 max-w-lg items-center justify-around px-2">
         {TABS.map((tab) => {
           const isActive = pathname === tab.href;
@@ -37,12 +37,16 @@ export function BottomNav() {
             <li key={tab.href} className="flex-1">
               <Link
                 href={tab.href}
-                className={`flex flex-col items-center justify-center gap-0.5 rounded-lg py-1.5 text-[10px] font-medium transition-colors duration-150 ${
+                className={`relative flex flex-col items-center justify-center gap-0.5 rounded-lg py-1.5 text-[10px] font-medium transition-colors duration-150 ${
                   isActive
                     ? "text-primary"
-                    : "text-muted-foreground hover-fine:text-foreground"
+                    : "text-muted hover-fine:text-ink"
                 }`}
+                aria-current={isActive ? "page" : undefined}
               >
+                {isActive && (
+                  <span className="absolute -top-0.5 h-1 w-6 rounded-full bg-primary" />
+                )}
                 <Icon
                   size={22}
                   weight={isActive ? "fill" : "regular"}
