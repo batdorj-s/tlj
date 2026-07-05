@@ -59,6 +59,22 @@
 
   --color-ring: var(--ring);
 
+  /* shadcn/ui aliases */
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--ink);
+  --color-popover: var(--bg);
+  --color-popover-foreground: var(--ink);
+  --color-primary-foreground: var(--on-primary);
+  --color-secondary: var(--muted-bg);
+  --color-secondary-foreground: var(--ink);
+  --color-muted-foreground: var(--muted);
+  --color-accent-foreground: var(--ink);
+  --color-destructive-foreground: var(--on-destructive);
+  --color-input: var(--border);
+  --color-ring: var(--ring);
+
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
 
