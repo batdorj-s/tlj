@@ -55,7 +55,7 @@ export function SpinToWin() {
     <div className="flex flex-col items-center px-4">
       <div className="relative w-[300px] h-[300px] max-w-full">
         <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2">
-          <div className="h-0 w-0 border-x-8 border-t-[14px] border-x-transparent border-t-foreground" />
+          <div className="h-0 w-0 border-x-8 border-t-[14px] border-x-transparent border-t-ink" />
         </div>
 
         <motion.svg

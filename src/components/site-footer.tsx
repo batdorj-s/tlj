@@ -40,7 +40,7 @@ export function SiteFooter() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-bg/80 transition-colors duration-150 ease-out hover-fine:text-background"
+                  className="text-sm text-bg/80 transition-colors duration-150 ease-out hover-fine:text-bg"
                 >
                   {link.label}
                 </Link>
@@ -58,7 +58,7 @@ export function SiteFooter() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-bg/80 transition-colors duration-150 ease-out hover-fine:text-background"
+                  className="text-sm text-bg/80 transition-colors duration-150 ease-out hover-fine:text-bg"
                 >
                   {link.label}
                 </Link>
@@ -80,7 +80,7 @@ export function SiteFooter() {
               <Phone size={18} weight="light" className="shrink-0" />
               <a
                 href="tel:+97675757510"
-                className="transition-colors duration-150 ease-out hover-fine:text-background"
+                className="transition-colors duration-150 ease-out hover-fine:text-bg"
               >
                 (976) 7575-7510
               </a>
@@ -89,7 +89,7 @@ export function SiteFooter() {
               <EnvelopeSimple size={18} weight="light" className="shrink-0" />
               <a
                 href="mailto:info@tlj.mn"
-                className="transition-colors duration-150 ease-out hover-fine:text-background"
+                className="transition-colors duration-150 ease-out hover-fine:text-bg"
               >
                 info@tlj.mn
               </a>

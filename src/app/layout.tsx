@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Bodoni_Moda, Jost } from "next/font/google";
 import { MotionProvider } from "@/components/motion-provider";
+import { Navbar } from "@/components/navbar";
+import { SiteFooter } from "@/components/site-footer";
 import { BottomNav } from "@/components/bottom-nav";
+import { CartFAB } from "@/components/cart-fab";
 import "./globals.css";
 
 const bodoniModa = Bodoni_Moda({
@@ -48,8 +51,13 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.webmanifest" />
       </head>
       <body className="min-h-full flex flex-col bg-bg text-ink font-body">
-        <MotionProvider>{children}</MotionProvider>
-        <BottomNav />
+        <MotionProvider>
+          <Navbar />
+          <main className="flex-1 pb-16">{children}</main>
+          <SiteFooter />
+          <BottomNav />
+        </MotionProvider>
+        <CartFAB />
       </body>
     </html>
   );
