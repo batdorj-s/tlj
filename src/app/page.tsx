@@ -9,7 +9,14 @@ import { ProductCard } from "@/components/product-card";
 import { LoyaltySection } from "@/components/loyalty-section";
 import { NewsSection } from "@/components/news-section";
 import GradientMenu from "@/components/ui/gradient-menu";
-import { easeOut, fadeUp, stagger, sectionProps } from "@/lib/animation";
+import {
+  customEase,
+  fadeUp,
+  fadeUpBlur,
+  stagger,
+  sectionProps,
+  sectionPropsHeavy,
+} from "@/lib/animation";
 import { PRODUCTS } from "@/lib/products";
 
 export default function Home() {
@@ -23,22 +30,27 @@ export default function Home() {
         <PromoBanner />
       </div>
 
-      <section className="mt-16">
+      <motion.section
+        variants={fadeUpBlur}
+        transition={customEase(0.8)}
+        {...sectionPropsHeavy}
+        className="mt-24"
+      >
         <div className="px-4 mb-6">
           <h2 className="font-heading text-lg text-ink">Ангилал</h2>
         </div>
         <GradientMenu />
-      </section>
+      </motion.section>
 
       <motion.section
         id="products"
         variants={stagger}
-        {...sectionProps}
-        className="mt-16 px-4"
+        {...sectionPropsHeavy}
+        className="mt-24 px-4"
       >
         <motion.div
-          variants={fadeUp}
-          transition={easeOut(0.5)}
+          variants={fadeUpBlur}
+          transition={customEase(0.8)}
           className="flex items-center justify-between"
         >
           <h2 className="font-heading text-lg text-ink">
@@ -54,7 +66,7 @@ export default function Home() {
 
         <motion.div
           variants={fadeUp}
-          transition={easeOut(0.5, 0.1)}
+          transition={customEase(0.8, 0.1)}
           className="mt-4 grid grid-cols-2 gap-3"
         >
           {PRODUCTS.map((product) => (
@@ -65,7 +77,7 @@ export default function Home() {
 
       <LoyaltySection />
 
-      <div className="mt-10">
+      <div className="mt-16 pb-24">
         <NewsSection />
       </div>
     </div>

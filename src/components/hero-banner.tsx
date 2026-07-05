@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { easeOut } from "@/lib/animation";
+import { ArrowRight } from "@phosphor-icons/react";
+import { customEase } from "@/lib/animation";
 
 function fadeUp(delay: number) {
   return {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: easeOut(0.6, delay),
+    transition: customEase(0.8, delay),
   };
 }
 
@@ -49,9 +50,12 @@ export function HeroBanner() {
           <motion.div {...fadeUp(0.18)}>
             <a
               href="#products"
-              className="mt-7 inline-block rounded-md bg-accent px-7 py-3 text-sm font-medium text-on-accent transition-[background-color,transform] duration-150 ease-out hover-fine:bg-accent-hover active:scale-[0.97]"
+              className="group mt-7 inline-flex items-center gap-3 rounded-full bg-accent pl-6 py-1.5 pr-1.5 text-sm font-medium text-on-accent transition-all duration-150 ease-out hover-fine:bg-accent-hover active:scale-[0.97]"
             >
-              Цэсийг үзэх
+              <span>Цэсийг үзэх</span>
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 transition-transform duration-200 ease-out group-hover:translate-x-0.5">
+                <ArrowRight size={14} weight="bold" />
+              </span>
             </a>
           </motion.div>
         </div>

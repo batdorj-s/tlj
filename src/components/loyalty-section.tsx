@@ -1,15 +1,17 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { SpinToWin } from "@/components/spin-to-win";
-import { easeOut, fadeUp, sectionProps } from "@/lib/animation";
+import { customEase, fadeUpBlur, sectionPropsHeavy } from "@/lib/animation";
 
 export function LoyaltySection() {
   return (
     <section id="loyalty" className="border-t border-border">
-      <div className="px-4 py-16 sm:py-20">
+      <div className="px-4 py-24 sm:py-28">
         <motion.div
-          variants={fadeUp}
-          transition={easeOut(0.5)}
-          {...sectionProps}
+          variants={fadeUpBlur}
+          transition={customEase(0.8)}
+          {...sectionPropsHeavy}
           className="text-center"
         >
           <p className="mb-2 text-xs font-medium uppercase tracking-[0.12em] text-primary">
@@ -24,9 +26,9 @@ export function LoyaltySection() {
         </motion.div>
 
         <motion.div
-          variants={fadeUp}
-          transition={easeOut(0.5, 0.1)}
-          {...sectionProps}
+          variants={fadeUpBlur}
+          transition={customEase(0.8, 0.1)}
+          {...sectionPropsHeavy}
           className="mt-8"
         >
           <SpinToWin />

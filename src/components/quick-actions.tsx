@@ -2,6 +2,7 @@
 
 import { QrCode, Spinner, Ticket, MapPin } from "@phosphor-icons/react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const ACTIONS = [
   {
@@ -34,19 +35,27 @@ export function QuickActions() {
   return (
     <div className="mx-4 mt-4">
       <div className="grid grid-cols-4 gap-3">
-        {ACTIONS.map((action) => {
+        {ACTIONS.map((action, i) => {
           const Icon = action.icon;
           return (
-            <Link
+            <motion.div
               key={action.href}
-              href={action.href}
-              className={`flex flex-col items-center gap-1.5 rounded-xl px-3 py-4 text-center transition-all duration-150 active:scale-[0.95] ${action.color}`}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1], delay: 0.3 + i * 0.06 }}
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <Icon size={26} weight="duotone" />
-              <span className="text-[11px] font-medium leading-tight">
-                {action.label}
-              </span>
-            </Link>
+              <Link
+                href={action.href}
+                className={`flex flex-col items-center gap-1.5 rounded-xl px-3 py-4 text-center transition-colors duration-150 ${action.color}`}
+              >
+                <Icon size={26} weight="duotone" />
+                <span className="text-[11px] font-medium leading-tight">
+                  {action.label}
+                </span>
+              </Link>
+            </motion.div>
           );
         })}
       </div>

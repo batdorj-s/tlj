@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ShoppingBag } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import type { Product } from "@/lib/types";
-import { easeOut, fadeUp } from "@/lib/animation";
+import { customEase, fadeUp } from "@/lib/animation";
 
 export function ProductCard({
   product,
@@ -17,7 +17,7 @@ export function ProductCard({
   return (
     <motion.article
       variants={fadeUp}
-      transition={easeOut(0.5)}
+      transition={customEase(0.6)}
       className="overflow-hidden rounded-xl border border-border bg-surface transition-[border-color,box-shadow] duration-200 ease-out [box-shadow:var(--shadow-soft)] hover-fine:[box-shadow:var(--shadow-soft-hover)]"
     >
       <Link href={`/products/${product.id}`} className="block">
@@ -48,10 +48,12 @@ export function ProductCard({
         <button
           type="button"
           onClick={() => onAddToCart?.(product)}
-          className="mt-1.5 inline-flex items-center justify-center gap-1.5 rounded-lg bg-primary px-4 py-2.5 text-xs font-medium text-on-primary transition-all duration-150 ease-out active:scale-[0.97] hover-fine:bg-primary-hover"
+          className="group mt-1.5 inline-flex items-center gap-2 rounded-lg bg-primary pl-3 pr-1.5 py-1.5 text-xs font-medium text-on-primary transition-all duration-150 ease-out active:scale-[0.97] hover-fine:bg-primary-hover"
         >
-          <ShoppingBag size={14} weight="bold" />
-          Сагсанд
+          <span className="flex-1">Сагсанд</span>
+          <span className="flex h-5 w-5 items-center justify-center rounded-md bg-white/20 transition-transform duration-200 ease-out group-hover:translate-x-0.5">
+            <ShoppingBag size={10} weight="bold" />
+          </span>
         </button>
       </div>
     </motion.article>
