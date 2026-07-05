@@ -9,30 +9,45 @@
 }
 
 :root {
-  --bg: oklch(1 0 0);
-  --ink: oklch(0.22 0.006 40);
-  --muted: oklch(0.52 0.005 40);
+  --bg: oklch(0.950 0.031 96.9);
+  --ink: oklch(0.305 0 0);
+  --muted: oklch(0.50 0.01 90);
 
-  --primary: oklch(0.46 0.17 25);
-  --primary-hover: oklch(0.40 0.17 25);
+  --primary: oklch(0.420 0.095 156.5);
+  --primary-hover: oklch(0.358 0.069 156.1);
   --on-primary: oklch(1 0 0);
 
-  --accent: oklch(0.66 0.12 75);
-  --accent-hover: oklch(0.60 0.12 75);
+  --accent: oklch(0.65 0.14 70);
+  --accent-hover: oklch(0.58 0.14 70);
   --on-accent: oklch(1 0 0);
 
-  --surface: oklch(0.975 0.003 30);
-  --muted-bg: oklch(0.96 0.003 30);
-  --border: oklch(0.92 0.003 30);
+  --surface: oklch(0.979 0.003 106.4);
+  --muted-bg: oklch(0.94 0.02 95);
+  --border: oklch(0.89 0.02 95);
 
   --success: oklch(0.55 0.14 145);
   --success-bg: oklch(0.96 0.01 145);
   --destructive: oklch(0.46 0.17 25);
   --on-destructive: oklch(1 0 0);
 
-  --ring: oklch(0.46 0.17 25);
+  --ring: oklch(0.420 0.095 156.5);
 
-  --shadow-ink: 0.22 0.006 40;
+  --shadow-ink: 0.305 0 0;
+
+  /* shadcn/ui raw CSS variables (for var() access) */
+  --background: var(--bg);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--bg);
+  --popover-foreground: var(--ink);
+  --primary-foreground: var(--on-primary);
+  --secondary: var(--muted-bg);
+  --secondary-foreground: var(--ink);
+  --muted-foreground: var(--muted);
+  --accent-foreground: var(--ink);
+  --destructive-foreground: var(--on-destructive);
+  --input: var(--border);
 }
 
 @theme inline {

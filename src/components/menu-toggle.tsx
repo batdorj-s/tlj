@@ -12,7 +12,7 @@ export function MenuToggle({
       type="button"
       aria-label={isOpen ? "Цэсийг хаах" : "Цэсийг нээх"}
       aria-expanded={isOpen}
-      className="relative flex h-10 w-10 items-center justify-center rounded-md text-ink transition-colors duration-150 ease-out hover-fine:bg-muted-bg active:scale-[0.97] md:hidden"
+      className="relative flex h-10 w-10 items-center justify-center rounded-md text-on-primary transition-colors duration-150 ease-out hover-fine:bg-white/10 active:scale-[0.97] md:hidden"
       {...props}
     >
       <span className="relative block h-3 w-5">

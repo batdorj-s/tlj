@@ -13,7 +13,7 @@ const LABEL_R = R * 0.62;
 
 const COLORS = [
   { fill: "var(--color-primary)", text: "var(--color-on-primary)" },
-  { fill: "#ffffff", text: "var(--color-foreground)" },
+  { fill: "#ffffff", text: "var(--foreground)" },
 ];
 
 function polar(radius: number, angleDeg: number) {

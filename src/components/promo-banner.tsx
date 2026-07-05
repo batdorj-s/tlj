@@ -7,7 +7,7 @@ const PROMOS = [
   {
     title: "Сонгогдсон бялуунууд 30% хямдарлаа",
     subtitle: "Дуусах хугацаа: 7 хоног",
-    gradient: "from-rose-500 to-primary",
+    gradient: "from-primary to-primary-hover",
   },
   {
     title: "Шинэ Салат & Сэндвич",
